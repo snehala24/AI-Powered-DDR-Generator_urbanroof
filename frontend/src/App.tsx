@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import { Upload, FileText, CheckCircle, AlertTriangle, Loader2, Download, ExternalLink } from 'lucide-react';
+import { Upload, FileText, CheckCircle, AlertTriangle, Loader2, Download } from 'lucide-react';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
-import { clsx } from 'clsx';
-import { twMerge } from 'tailwind-merge';
 
 // Define types
 interface AnalysisResponse {
@@ -11,10 +9,6 @@ interface AnalysisResponse {
     report_md: string;
     report_json: any;
     filename: string;
-}
-
-function cn(...inputs: (string | undefined | null | false)[]) {
-    return twMerge(clsx(inputs));
 }
 
 function App() {
