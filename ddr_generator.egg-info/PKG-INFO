@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: ddr-generator
+Version: 1.0.0
+Summary: AI-powered Structural Diagnostic Report Generation System
+Home-page: UNKNOWN
+Author: Urban Roof Project
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+UNKNOWN
+

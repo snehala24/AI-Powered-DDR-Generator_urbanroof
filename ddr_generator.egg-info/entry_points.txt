@@ -1,0 +1,3 @@
+[console_scripts]
+ddr-generate = ddr_generator.main:main
+

@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ddr-generator
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "uvicorn ddr_generator.server:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.0
+      - key: GROQ_API_KEY
+        sync: false  # You must set this in the Render Dashboard securely!
