@@ -1,5 +1,7 @@
 # 🏗️ AI-Powered DDR Generator
 
+**[🔴 LIVE DEMO](https://ai-powered-ddr-generator-urbanroof.onrender.com/)** | **[📺 WATCH VIDEO DEMO](DEMO_SCRIPT.md)**
+
 An intelligent web application that automates the creation of **Detailed Diagnostic Reports (DDR)** for building inspections. It takes raw inspection data (PDFs) and uses Large Language Models (LLM) to generate professional, structured reports.
 
 ![DDR Generator UI](frontend/public/vite.svg)
