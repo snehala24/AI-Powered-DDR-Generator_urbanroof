@@ -16,43 +16,36 @@ if __name__ == "__main__":
     if str(current_dir) not in sys.path:
         sys.path.insert(0, str(current_dir))
 
-# Try relative imports first (when run as module), fall back to absolute
+# Imports
+# using relative imports which work when running as a package (via server.py)
 try:
-    # Extractors
     from .extractors import InspectionParser, ThermalParser
-    
-    # Processors
     from .processors import (
         DataStructurer,
         Deduplicator,
         CorrelationEngine,
         SeverityEngine
     )
-    
-    # Generators
     from .generators import DDRGenerator
-    
-    # Utils
     from .utils import validate_report_completeness
-    
-    # Schemas
     from .schemas import DDRReport
-    
-    # Config
     from .config import config
 except ImportError:
-    # Fallback for direct execution
-    from extractors import InspectionParser, ThermalParser
-    from processors import (
+    # If relative imports fail, it might be because of direct execution
+    # or obscure path issues. 
+    # But for Render/Uvicorn, we MUST use package structure.
+    # Let's try absolute imports assuming ddr_generator is in path
+    from ddr_generator.extractors import InspectionParser, ThermalParser
+    from ddr_generator.processors import (
         DataStructurer,
         Deduplicator,
         CorrelationEngine,
         SeverityEngine
     )
-    from generators import DDRGenerator
-    from utils import validate_report_completeness
-    from schemas import DDRReport
-    from config import config
+    from ddr_generator.generators import DDRGenerator
+    from ddr_generator.utils import validate_report_completeness
+    from ddr_generator.schemas import DDRReport
+    from ddr_generator.config import config
 
 
 class DDRPipeline:
